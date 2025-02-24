@@ -6,7 +6,7 @@
 Three objectives were defined for this thesis based on gaps identified with the help of comprehensive literature review.
         1. *Create a robust UNet-based deep learning model accurate for building segmentation.*\
         2. *Enhance the dataset using some advanced pre-processing techniques like **binary mask splitting**, **data augmentation** and then further improve it by creating a new dataset using **canny edge detection algorithm**.*\
-        3. *Implement Labelling section for the model to highlight 5 most relevant building components that are aligned with green building standards or integrating vegetation.*\
+        3. *Implement Labelling section for the model to highlight 5 most relevant building components that are aligned with green building standards or integrating vegetation.*
 #### Dataset:
 The dataset that has been used for this thesis is [CMP FACADE DATASET](Tylecek R. The cmp facade database. Czech Tech. Univ., Prague, Czechia, Res. Rep. CTU–CMP–2012–24. 2012.).
 #### Model:
