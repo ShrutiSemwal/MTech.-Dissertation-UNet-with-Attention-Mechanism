@@ -8,6 +8,6 @@ Three objectives were defined for this thesis based on gaps identified with the 
         2. *Enhance the dataset using some advanced pre-processing techniques like **binary mask splitting**, **data augmentation** and then further improve it by creating a new dataset using **canny edge detection algorithm**.*\
         3. *Implement Labelling section for the model to highlight 5 most relevant building components that are aligned with green building standards or integrating vegetation.*
 #### Dataset:
-The dataset that has been used for this thesis is [CMP FACADE DATASET](Tylecek R. The cmp facade database. Czech Tech. Univ., Prague, Czechia, Res. Rep. CTU–CMP–2012–24. 2012.).
+The dataset that has been used for this thesis is [CMP FACADE DATASET](https://www.researchgate.net/profile/Radim-Tylecek-2/publication/267764713_CMP_Facade_Database/links/545a2e5e0cf26d5090ad70c2/CMP-Facade-Database.pdf).
 #### Model:
 Model has been defined using **UNet structure incorporating Spatial Multiplicative Cross Attention Mechanism**. Total 9 fits were implementated for model training. It was evaluated using Accuracy, Mean Intersection over Union, Precision, Recall and F1-Score. Predictions have been depicted in plots.
