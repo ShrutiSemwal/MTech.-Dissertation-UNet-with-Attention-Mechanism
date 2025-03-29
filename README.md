@@ -2,6 +2,13 @@
 
 ### This is the Mtech Dissertation work titled "Optimizing Green Building Implementation via Deep Learning Powered-Segmentation Techniques" contributed to the integration of green building domain and deep learning domain for sustainable development using AI.
 
+### Problem Statement
+The construction industry is a significant contributor to environmental degradation, and green buildings are a major solution. A building’s façade plays a key role in sustainability by improving air, look of the buildings, and usage of energy. However, traditional building tools lack precision, impacting sustainable building design efforts. My research work addresses this gap by using deep learning to accurately segment and analyze façade components for optimized green building designs. 
+
+### Motivation
+- This study is motivated by the growing need for durable and eco-friendly metropolitan places transformation. By focusing on building exteriors as promising green spaces, this research envisions transforming building components to support plants and greenery. Through deep learning, we can identify optimal areas on building for vegetation placement based on factors like sunlight and water availability. This approach has the potential to improve urban air quality, increase biodiversity, and promote healthier metropolitan living.
+- Generally, green building evaluation tools are specially tailored for future building projects where all these criteria are followed from stage 1 itself. But what if a building is already built and we want to apply gb standards on those buildings? Therefore, my work is going to target that research area, where with the use of a deep learning model, we will be applying gb design on such buildings that can be beneficial in the field of structural planning.
+
 #### Objectives:
 Three objectives were defined for this thesis based on gaps identified with the help of comprehensive literature review.\
         1. *Create a robust UNet-based deep learning model accurate for building segmentation.*\
