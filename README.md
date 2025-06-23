@@ -1,20 +1,103 @@
-# MTech.-Dissertation-UNet-with-Attention-Mechanism
+# MTech Dissertation: UNet with Spatial Attention Mechanism for Green Building Optimization
 
-### This is the Mtech Dissertation work titled "Optimizing Green Building Implementation via Deep Learning Powered-Segmentation Techniques" contributed to the integration of green building domain and deep learning domain for sustainable development using AI.
+### Title: **Optimizing Green Building Implementation via Deep Learning-Powered Segmentation Techniques**
 
-### Problem Statement
-The construction industry is a significant contributor to environmental degradation, and green buildings are a major solution. A building’s façade plays a key role in sustainability by improving air, look of the buildings, and usage of energy. However, traditional building tools lack precision, impacting sustainable building design efforts. My research work addresses this gap by using deep learning to accurately segment and analyze façade components for optimized green building designs. 
+---
 
-### Motivation
-- This study is motivated by the growing need for durable and eco-friendly metropolitan places transformation. By focusing on building exteriors as promising green spaces, this research envisions transforming building components to support plants and greenery. Through deep learning, we can identify optimal areas on building for vegetation placement based on factors like sunlight and water availability. This approach has the potential to improve urban air quality, increase biodiversity, and promote healthier metropolitan living.
-- Generally, green building evaluation tools are specially tailored for future building projects where all these criteria are followed from stage 1 itself. But what if a building is already built and we want to apply gb standards on those buildings? Therefore, my work is going to target that research area, where with the use of a deep learning model, we will be applying gb design on such buildings that can be beneficial in the field of structural planning.
+## 🌿 Overview
 
-#### Objectives:
-Three objectives were defined for this thesis based on gaps identified with the help of comprehensive literature review.\
-        1. *Create a robust UNet-based deep learning model accurate for building segmentation.*\
-        2. *Enhance the dataset using some advanced pre-processing techniques like **binary mask splitting**, **data augmentation** and then further improve it by creating a new dataset using **canny edge detection algorithm**.*\
-        3. *Implement Labelling section for the model to highlight 5 most relevant building components that are aligned with green building standards or integrating vegetation.*
-#### Dataset:
-The dataset that has been used for this thesis is [CMP FACADE DATASET](https://www.researchgate.net/profile/Radim-Tylecek-2/publication/267764713_CMP_Facade_Database/links/545a2e5e0cf26d5090ad70c2/CMP-Facade-Database.pdf). This dataset was further improved by creating a new dataset [CED DATASET](https://github.com/ShrutiSemwal/MTech.-Dissertation-UNet-with-Attention-Mechanism/tree/main/CED%20dataset) by employing canny edge detection on building images for edge clarity and using data augmentation techniques to increase its size and solve class imbalance.
-#### Model:
-Model has been defined using **UNet structure incorporating Spatial Multiplicative Cross Attention Mechanism**. Total 9 fits were implementated for model training. It was evaluated using Accuracy, Mean Intersection over Union, Precision, Recall and F1-Score. Predictions have been depicted in plots.
+This M.Tech dissertation bridges the gap between **deep learning** and **green building** domains, contributing to the larger goal of sustainable urban development. The study focuses on using advanced semantic segmentation techniques to identify key façade components in existing buildings, enabling retrofitting with green features like vegetation, vertical gardens, or energy-efficient design.
+
+---
+
+## 🧩 Problem Statement
+
+The construction sector significantly contributes to environmental degradation. Green buildings offer a sustainable solution, but traditional tools often lack the precision to retrofit existing buildings with green standards. In this work, a deep learning model has been developed to segment building façades, helping to analyze and visualize suitable zones for green implementations like planting systems, energy panels, and ventilation features.
+
+---
+
+## 💡 Motivation
+
+- Modern urban areas demand transformation into eco-friendly spaces.
+- Building exteriors provide untapped potential for hosting vertical greenery.
+- Existing green building tools are tailored for **new constructions**, but **this research focuses on already-built structures**, providing scalable solutions to upgrade them with sustainable features.
+- With accurate façade segmentation, we can target features like **balconies**, **windows**, or **pillar** that could support vegetation, improve air quality, and boost aesthetic value.
+
+---
+
+## 🎯 Objectives
+
+The following objectives were formulated based on a thorough literature review and gap identification:
+
+1. **Develop a Deep Learning-based robust U-Net Model for accurate building facade segmentation.**
+2. **Enhancement of data quality by using pre-processing techniques, edge detection and creation of a new dataset.**
+3. **Analyse segmented components to enhance vegetation and sustainability to choose 5 most relevant components for labelling section.**
+
+---
+
+## 📂 Dataset
+
+- **Base Dataset**: [CMP Facade Dataset](https://www.researchgate.net/profile/Radim-Tylecek-2/publication/267764713_CMP_Facade_Database/links/545a2e5e0cf26d5090ad70c2/CMP-Facade-Database.pdf)
+- **Enhanced Dataset**: [CED Dataset](https://github.com/ShrutiSemwal/MTech.-Dissertation-UNet-with-Attention-Mechanism/tree/main/CED%20dataset)
+
+**Canny Edge Detection** was applied to improve edge clarity. Custom data augmentation was employed to address **class imbalance** and **increase the size** of the dataset.
+
+<img src="img/dataAug.png" width="300"/> 
+<em>Data augmentation techniques applied to boost dataset variability.</em><br><br>
+
+<img src="img/ced.png" width="400"/>  
+<em>Example output from CED dataset using Canny Edge Detection for clearer feature separation.</em>
+
+---
+
+## 🧠 Proposed Model
+
+A custom **UNet model** was built and enhanced with a **Spatial Multiplicative Cross-Attention Mechanism** to focus on semantically relevant regions. The network follows a typical encoder-decoder structure with:
+
+- Convolution → DropOut → BatchNorm → Activation → Pooling  
+- Attention mechanism applied in the upsampled feature maps and skip tensor values 
+- Optimizer: `Adam`, Loss: `Categorical Focal Loss`  
+- Metrics: `Accuracy`, `Mean IoU`, `Precision`, `Recall`, `F1-Score`
+
+<img src="img/model2Flow.png" width="600"/> 
+<em>Flow-Diagram of Model.</em><br><br>
+
+![UNet Attention Model](img/unet_attention.png)
+*UNet architecture with Spatial Attention components.*
+
+---
+
+## 🔍 Evaluation and Final Results
+
+- Training was performed for **9 fits (epochs)** using the enhanced CED dataset.
+- The final model demonstrated consistent improvement in segmentation accuracy and class precision.
+- Visual comparisons of predictions indicate accurate boundary detection and effective component differentiation.
+- The model successfully segments building images to highlight façade components suitable for green retrofit.
+
+<img src="img/valMetrics.png" width="300"/>  
+<em>Final model performance across multiple metrics.</em><br><br>
+
+<img src="img/model2Val.png" width="600"/>  
+<em>Prediction Masks generated by the model.</em>
+
+---
+
+## 🏷️ Labelling and Classes
+
+The final labelled section consists of **five façade classes** most aligned with green building standards:
+
+| Label       | BGR Color Code   | Applicability                                                               |
+|-------------|------------------|-----------------------------------------------------------------------------|
+| Window      | `(255, 85, 0)`   | Placement for air-purifying plants                                          |
+| Balcony     | `(85, 255, 170)` | Candidate zones for vertical gardens, hanging plants and small vegetation   |
+| Pillar      | `(0, 0, 255)`    | For facade-supported green walls or climbing plants                         |
+| Molding     | `(0, 85, 255)`   | Vertical Planters, hanging plants or ornamental plants                      |
+| Sill        | `(0, 170, 255)`  | Living Wall System where plants substrate                                   |
+
+<img src="img/building5Classes.png" width="500"/>  
+<em>Building components represented on sample image.</em><br><br>
+
+<img src="img/labelling.png" width="500"/>  
+<em>Annotated façade images with 5 core components labelled.</em>
+
+---
