@@ -40,7 +40,9 @@ The following objectives were formulated based on a thorough literature review a
 - **Base Dataset**: [CMP Facade Dataset](https://www.researchgate.net/profile/Radim-Tylecek-2/publication/267764713_CMP_Facade_Database/links/545a2e5e0cf26d5090ad70c2/CMP-Facade-Database.pdf)
 - **Enhanced Dataset**: [CED Dataset](https://github.com/ShrutiSemwal/MTech.-Dissertation-UNet-with-Attention-Mechanism/tree/main/CED%20dataset)
 
-**Canny Edge Detection** was applied to improve edge clarity. Custom data augmentation was employed to address **class imbalance** and **increase the size** of the dataset.
+1. **Binary Mask Splitting** technique was applied to achieve **fine-grained separation** of labels.
+2. **Canny Edge Detection** was applied to improve **edge clarity**.
+3. **Custom data augmentation** was employed to address **class imbalance** and **increase the size** of the dataset.
 
 <img src="img/dataAug.png" width="300"/> 
 <em>Data augmentation techniques applied to boost dataset variability.</em><br><br>
