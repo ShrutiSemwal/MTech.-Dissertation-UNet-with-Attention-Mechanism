@@ -72,7 +72,7 @@ A custom **UNet model** was built and enhanced with a **Spatial Multiplicative C
 ## 🔍 Evaluation and Final Results
 
 - Training was performed for **9 fits (epochs)** using the enhanced CED dataset.
-- The final model demonstrated consistent improvement in segmentation accuracy and class precision.
+- The final model demonstrated consistent improvement in segmentation accuracy and class precision: **98.1% accuracy, 87% mean Intersection over Union score and 93% f1-Score**.
 - Visual comparisons of predictions indicate accurate boundary detection and effective component differentiation.
 - The model successfully segments building images to highlight façade components suitable for green retrofit.
 
