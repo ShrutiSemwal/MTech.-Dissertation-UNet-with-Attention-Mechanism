@@ -55,6 +55,7 @@ The following objectives were formulated based on a thorough literature review a
 ## 🧠 Proposed Model
 
 **UNet Model**
+
 The U-Net architecture is a convolutional neural network designed for image segmentation tasks. It has an encoder-decoder structure, where the encoder captures context by down-sampling the input image, and the decoder reconstructs the image at a higher resolution. Skip connections between corresponding layers in the encoder and decoder help preserve spatial information, which is crucial for accurate segmentation. U-Net’s ability to deliver pixel-level accuracy makes it ideal for building segmentation tasks, ensuring that even small but important features are correctly identified, which is vital for green building assessments. 
 
 A custom **UNet model** was built and enhanced with a **Spatial Multiplicative Cross-Attention Mechanism** to focus on semantically relevant regions. The network follows a typical encoder-decoder structure with:
