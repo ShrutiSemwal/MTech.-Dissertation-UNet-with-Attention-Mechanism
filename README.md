@@ -103,3 +103,6 @@ The final labelled section consists of **five façade classes** most aligned wit
 <em>Annotated façade images with 5 core components labelled.</em>
 
 ---
+
+## ✔️ Conclusion
+This research highlights how deep learning, when thoughtfully integrated with domain-specific knowledge, in this case, green building principles; can address real-world challenges such as environmental sustainability and urban infrastructure planning. By blending traditional architectural understanding with modern computer vision techniques, we not only enhance the precision of building analysis but also contribute to more informed, eco-conscious decision-making. Moving forward, such interdisciplinary approaches will be vital in designing resilient, intelligent systems that serve both technological progress and planetary well-being.
